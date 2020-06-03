@@ -19,8 +19,7 @@ export class EmpresaTablaComponent implements OnInit {
     this.GetEmpresaArticulos()
   }
  GetEmpresaArticulos() {
-    this.empresaArt.get()
-    .subscribe((res:EmpresaArticulos[]) => {
+    this.empresaArt.get().subscribe((res:EmpresaArticulos[]) => {
       this.Items = res;
     });
   }

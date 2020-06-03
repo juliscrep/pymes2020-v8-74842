@@ -17,10 +17,9 @@ resourceUrl: string;
     this.resourceUrl = "https://pavii.ddns.net/api/empresas";
    }
 
-   get():Observable<EmpresaArticulos> {
-    return this.httpClient.get<EmpresaArticulos>(this.resourceUrl);
+     getEmpresa():Observable<EmpresaArticulos[]>{
+    return this.httpClient.get<EmpresaArticulos[]>("https://pavii.ddns.net/api/empresas");
   }
-  
 
 }
 
