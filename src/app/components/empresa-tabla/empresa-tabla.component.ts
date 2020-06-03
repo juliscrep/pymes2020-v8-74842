@@ -12,16 +12,15 @@ import {ActivatedRoute} from '@angular/router';
 export class EmpresaTablaComponent implements OnInit {
   Titulo = "Articulos Empresa";
   Items: EmpresaArticulos[] = [];
-  
-  constructor(private empresaArt:  EmpresaArticulos)
+    
+  constructor(private empresaArt: ServicioEmpresasService)
   { }
 
-  ngOnInit() {
+  ngOnInit():void {
     this.GetEmpresaArticulos()
   }
  GetEmpresaArticulos() {
-    this.empresaArt.get
-    .subscribe((res:EmpresaArticulos[]) => {
+    this.empresaArt.getEmpresa().subscribe((res:EmpresaArticulos[]) => {
       this.Items = res;
     });
   }
