@@ -1,0 +1,18 @@
+<table class="table table-striped" *ngIf="verTabla"> 
+  <thead class="table-dark">
+  <tr>
+    <th> Cant Empleados</th>
+    <th> FechaFundacion</th>
+    <th> Id Empresa</th>
+    <th> Razon social</th>
+  </tr>
+  </thead>
+  <tbody>
+   <tr *ngFor="let art of listaArt">
+     <td>{{art.CantidadEmpleados}}</td>
+     <td>{{art.FechaFundacion}}</td> 
+     <td>{{art.IdEmpresa}}</td> 
+     <td>{{art.RazonSocial}}</td> 
+   </tr> 
+  </tbody>
+</table>
