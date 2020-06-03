@@ -5,7 +5,7 @@ import {
   HttpErrorResponse,
   HttpParams
 } from "@angular/common/http";
-import { of } from "rxjs";
+import { of, Observable } from "rxjs";
 import {EmpresaArticulos} from "../models/empresa"; 
 
 @Injectable(
@@ -17,9 +17,10 @@ resourceUrl: string;
     this.resourceUrl = "https://pavii.ddns.net/api/empresas";
    }
 
-   get() {
-    return this.httpClient.get(this.resourceUrl);
+   get():Observable<EmpresaArticulos> {
+    return this.httpClient.get<EmpresaArticulos>(this.resourceUrl);
   }
+  
 
 }
 

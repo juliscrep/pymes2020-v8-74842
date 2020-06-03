@@ -48,9 +48,10 @@ import empresaTablaComponentCss from "./components/empresa-tabla/empresa-tabla.c
     NgbModalModule,
   ],
   entryComponents: [ModalDialogComponent],
-  providers: [
+  bootstrap: [AppComponent,EmpresaTablaComponent],
+
+  providers:[
      {provide: APP_BASE_HREF, useValue : '/' },
     {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true}],
-  bootstrap: [AppComponent,EmpresaTablaComponent]
-})
+ })
 export class AppModule {}
