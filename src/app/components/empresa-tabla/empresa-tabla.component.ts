@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import{ServicioEmpresasService}from  "../../services/servicio-empresas.service";
 import{EmpresaArticulos} from "../../models/empresa";
 import {ActivatedRoute} from '@angular/router';
+
 @Component({
   selector: 'app-empresa-tabla',
   templateUrl: './empresa-tabla.component.html',
@@ -20,7 +21,7 @@ export class EmpresaTablaComponent implements OnInit {
     this.GetEmpresaArticulos()
   }
  GetEmpresaArticulos() {
-    this.empresaArt.getEmpresa().subscribe((res:EmpresaArticulos[]) => {
+    this.empresaArt.getEmpresa().subscribe(be((res:EmpresaArticulos[]) => {
       this.Items = res;
     });
   }
