@@ -42,7 +42,7 @@ import empresaTablaComponentCss from "./components/empresa-tabla/empresa-tabla.c
       { path: 'inicio', component: InicioComponent },
       { path: 'articulos', component: ArticulosComponent },
       { path: 'articulosfamilias', component: ArticulosFamiliasComponent },
-      {path:'empresa-tabla',component:EmpresaTablaComponent }
+      {path:'empresaTabla',component:EmpresaTablaComponent }
     ]),
     NgbPaginationModule,
     NgbModalModule,
@@ -52,6 +52,6 @@ import empresaTablaComponentCss from "./components/empresa-tabla/empresa-tabla.c
 
   providers:[
      {provide: APP_BASE_HREF, useValue : '/' },
-    {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true}],
+    {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true}],providers: [ServicioEmpresasService]
  })
 export class AppModule {}

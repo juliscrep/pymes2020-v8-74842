@@ -1,3 +1,4 @@
+
 export class EmpresaArticulos {
 
   CantidadEmpleados: number
