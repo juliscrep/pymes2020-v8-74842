@@ -6,28 +6,20 @@ import {
   HttpParams
 } from "@angular/common/http";
 import { of } from "rxjs";
-import {EmpresaArticulos} from "scr/app/models/Empresa"
+import {EmpresaArticulos} from "../models/empresa"; 
 
-@Injectable()
+@Injectable(
+  {providedIn: "root"}
+)
 export class ServicioEmpresasService {
-
-  constructor() { }
-
-}
-
-
-import { Articulo } from "../models/articulo";
-
-@Injectable({
-  providedIn: "root"
-})
-export class ArticulosFamiliasService {
-  resourceUrl: string;
+resourceUrl: string;
   constructor(private httpClient: HttpClient) {
     this.resourceUrl = "http://localhost:49681/api/ArticulosFamilias/";
-  }
+   }
 
-  get() {
+   get() {
     return this.httpClient.get(this.resourceUrl);
   }
+
 }
+
