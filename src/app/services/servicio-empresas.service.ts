@@ -14,7 +14,7 @@ import {EmpresaArticulos} from "../models/empresa";
 export class ServicioEmpresasService {
 resourceUrl: string;
   constructor(private httpClient: HttpClient) {
-    this.resourceUrl = "http://localhost:49681/api/ArticulosFamilias/";
+    this.resourceUrl = "https://pavii.ddns.net/api/empresas";
    }
 
    get() {

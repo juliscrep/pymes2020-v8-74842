@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import{ServicioEmpresasService}from  "../../services/servicio-empresas";
+
 
 @Component({
   selector: 'app-empresa-tabla',
