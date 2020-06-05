@@ -22,6 +22,7 @@ import { ModalDialogComponent } from "./components/modal-dialog/modal-dialog.com
 import { EmpresaTablaComponent } from './components/empresa-tabla/empresa-tabla.component';
 import { ServicioEmpresasService } from './services/servicio-empresas.service';
 import empresaTablaComponentCss from "./components/empresa-tabla/empresa-tabla.component.css";
+import { EmpresaABMService } from './services/empresa-abm.service';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,6 @@ import empresaTablaComponentCss from "./components/empresa-tabla/empresa-tabla.c
 
   providers:[
      {provide: APP_BASE_HREF, useValue : '/' },
-    {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true}],providers: [ServicioEmpresasService]
+    {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, providers: [EmpresaABMService]}],providers: [ServicioEmpresasService]
  })
 export class AppModule {}
