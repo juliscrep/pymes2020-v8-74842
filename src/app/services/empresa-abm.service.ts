@@ -19,11 +19,15 @@ export class EmpresaABMService {
   }
   
   getById(IdEmpresa: number) {
-    return this.httpClient.get(this.resourceUrl + Id);
+
+    return this.httpClient.get(this.resourceUrl + IdEmpresa);
   }
 
   post(obj:EmpresaArticulos) {
-    return this.httpClient.post(this.resourceUrl, obj);
+     obj.IdEmpresa = new Date().getTime();
+    EmpresaArticulos.push(obj);
+    return of(obj);
+    
   }
 
   put(Id: number, obj:EmpresaArticulos) {
