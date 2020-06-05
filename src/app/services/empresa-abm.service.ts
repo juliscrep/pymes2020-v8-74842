@@ -8,9 +8,15 @@ import {
 import { of } from "rxjs";
 import { EmpresaArticulos } from "../models/empresa";
 
-@Injectable()
+@Injectable({
+  providedIn: "root"}
+)
 export class EmpresaABMService {
 
-  constructor() { }
+  resourceUrl: string;
+  constructor(private httpClient: HttpClient) {
+    this.resourceUrl = "https://pavii.ddns.net/api/empresas";
+  }
+ 
 
 }
