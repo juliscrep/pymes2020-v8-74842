@@ -4,6 +4,7 @@ import{ServicioEmpresasService}from  "../../services/servicio-empresas.service";
 import {EmpresaABMService} from "../../services/empresa-abm.service"
 import{EmpresaArticulos} from "../../models/empresa";
 import {ActivatedRoute} from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-empresa-tabla',
