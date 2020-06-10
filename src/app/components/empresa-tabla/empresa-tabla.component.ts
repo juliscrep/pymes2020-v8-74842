@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import{ServicioEmpresasService}from  "../../services/servicio-empresas.service";
+import {EmpresaABMService} from "../../services/empresa-abm.service"
 import{EmpresaArticulos} from "../../models/empresa";
 import {ActivatedRoute} from '@angular/router';
 
@@ -24,4 +25,17 @@ export class EmpresaTablaComponent implements OnInit {
     this.empresaArt.getEmpresa().subscribe(
       (res:EmpresaArticulos[]) => { this.Items = res});
   }
+
+  Consultar(dto){
+
+  }
+
+  CrearNuevo(dto){ 
+
+  }
+  
+  Eliminar(dto){
+
+  }
+
 }
