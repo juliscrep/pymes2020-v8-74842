@@ -14,12 +14,17 @@ import {ActivatedRoute} from '@angular/router';
 export class EmpresaTablaComponent implements OnInit {
   Titulo = "Articulos Empresa";
   Items: EmpresaArticulos[] = [];
-    
+    verForm
+    =false
   constructor(private empresaArt: ServicioEmpresasService, private abm:EmpresaABMService)
   { }
 
   ngOnInit():void {
     this.GetEmpresaArticulos()
+  }
+
+  mostrarForm(){
+ this.verForm=!this.verForm;
   }
  GetEmpresaArticulos() {
     this.empresaArt.getEmpresa().subscribe(

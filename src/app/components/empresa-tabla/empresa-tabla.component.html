@@ -23,7 +23,7 @@
     	<td>
         	<button type="button" class="btn btn-sm btn-outline-primary" title="Edit" (click)="Consultar(dto)">
                     <span class="fas fa-pencil-alt"></span>       </button>
-         <button type="button" class="btn btn-sm btn-outline-success" title="New" (click)="CrearNuevo(dto)"> <span class="fas fa-{{dt? 'times':'check'}}"></span> </button> 
+         <button type="button" class="btn btn-sm btn-outline-success" title="New" (click)="CrearNuevo(dto) && mostrarForm()"> <span class="fas fa-{{dt? 'times':'check'}}"></span> </button> 
 					<button type="button" class="btn btn-sm btn-danger" title="Delete" (click)="Eliminar(dto)">
                     <span class="fas fa-{{dt? !'times':'times'}}"></span>
                 </button>
@@ -42,13 +42,9 @@
   <br>
 
 </div>
-<div *ngIf="false">
-<h1>Empresa (Agregar)</h1> 
-<br>
-</div>
 
 
-<form name="FormReg" [formGroup]='FormReg' *ngIf="false" class="bg-light">
+<form name="FormReg" [formGroup]='FormReg' *ngIf="mostrarForm()" class="bg-light">
 
 
 	<fieldset [disabled]="AccionABMC==='C'">
