@@ -48,16 +48,15 @@
                     class="text-danger">*</span></label>
 			<div class="col-sm-6">
 				<input type="text" class="form-control" formControlName="CantEmpleados" 
-         [ngClass]="{'is-invalid': (FormReg.controls.Nombre.touched || submitted)  
-            && FormReg.controls.Nombre.errors}" />
+         [ngClass]="{'is-invalid': (FormReg.controls.CantEmpleados.touched || submitted)  
+            && FormReg.controls.CantEmpleados.errors}" />
 
-				<span class="text-danger" *ngIf="(FormReg.controls.Nombre.touched || submitted) 
-                        && FormReg.controls.Nombre.errors?.required">
+				<span class="text-danger" *ngIf="(FormReg.controls.CantEmpleados.touched || submitted) 
+                        && FormReg.controls.CantEmpleados.errors?.required">
                     Dato requerido.
                 </span>
-                <span class="text-danger" *ngIf="(FormReg.controls.Nombre.touched || submitted) 
-                       && (FormReg.controls.Nombre.errors?.minlength || FormReg.controls.Nombre.errors?.maxlength) ">
-                    Dato numerico, 3 a 4 caracteres.
+                <span class="text-danger" *ngIf="(FormReg.controls.CantEmpleados.touched || submitted) 
+                       && (FormReg.controls.CantEmpleados.errors?.minlength || FormReg.controls.CantEmpleados.errors?.maxlength) "> Dato numerico, 3 a 4 caracteres.
                 </span>
                 
 			</div>
