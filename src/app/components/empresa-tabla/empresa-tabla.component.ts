@@ -14,7 +14,7 @@ import {ActivatedRoute} from '@angular/router';
 export class EmpresaTablaComponent implements OnInit {
   Titulo = "Articulos Empresa";
   Items: EmpresaArticulos[] = [];
-  verForm=true  
+  verForm=false  
   constructor(private empresaArt: ServicioEmpresasService, private abm:EmpresaABMService)
   { }
 
@@ -23,7 +23,7 @@ export class EmpresaTablaComponent implements OnInit {
   }
 
   mostrarForm(){
- this.verForm=false;
+ this.verForm=!this.verForm;
   }
  GetEmpresaArticulos() {
     this.empresaArt.getEmpresa().subscribe(
