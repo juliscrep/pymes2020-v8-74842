@@ -26,6 +26,8 @@ export class EmpresaTablaComponent implements OnInit {
 
   ngOnInit():void {
     this.GetEmpresaArticulos()
+    
+    this.FormReg=this.formBuilder.group(" ");
   }
 
   mostrarForm(){

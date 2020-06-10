@@ -44,10 +44,10 @@
 	<fieldset [disabled]="AccionABMC==='C'">
 		<!--campo cant empleados-->
 		<div class="form-group row">
-			<label class="col-form-label col-sm-2 col-sm-offset-2" for="Nombre">Cantidad empleados <span
+			<label class="col-form-label col-sm-2 col-sm-offset-2" for="CantEmpleados">Cantidad empleados <span
                     class="text-danger">*</span></label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" formControlName="Nombre" 
+				<input type="text" class="form-control" formControlName="CantEmpleados" 
          [ngClass]="{'is-invalid': (FormReg.controls.Nombre.touched || submitted)  
             && FormReg.controls.Nombre.errors}" />
 
@@ -65,10 +65,10 @@
 
 <!--campo fecha fundacion-->
 		<div class="row form-group">
-			<label class="col-form-label col-sm-2 col-sm-offset-2" for="Precio">Fecha fundacion <span
+			<label class="col-form-label col-sm-2 col-sm-offset-2" for="FechaF">Fecha fundacion <span
                     class="text-danger">*</span></label>
 			<div class="col-sm-6">
-				<input type="text" name="Precio" class="form-control" formControlName="Precio"
+				<input type="text" name="Precio" class="form-control" formControlName="Fecha"
             [ngClass]="{'is-invalid': (FormReg.controls.Precio.touched || submitted)  
             && FormReg.controls.Precio.errors}" />
 				<span class="text-danger" *ngIf="(FormReg.controls.Precio.touched || submitted) 
@@ -84,10 +84,10 @@
 
 <!--campo id empresa-->
 		<div class="row form-group">
-			<label class="col-form-label col-sm-2 col-sm-offset-2" for="Precio">Id empresa<span
+			<label class="col-form-label col-sm-2 col-sm-offset-2" for="IdEmpresa">Id empresa<span
                     class="text-danger">*</span></label>
 			<div class="col-sm-6">
-				<input type="text" name="Precio" class="form-control" formControlName="Precio"
+				<input type="text" name="Precio" class="form-control" formControlName="IdEmpresa"
             [ngClass]="{'is-invalid': (FormReg.controls.Precio.touched || submitted)  
             && FormReg.controls.Precio.errors}" />
 				<span class="text-danger" *ngIf="(FormReg.controls.Precio.touched || submitted) 
@@ -103,10 +103,10 @@
 
 	<!--campo razon social-->
 		<div class="form-group row">
-			<label class="col-form-label col-sm-2 col-sm-offset-2" for="Nombre">Razon social<span
+			<label class="col-form-label col-sm-2 col-sm-offset-2" for="RazonSocial">Razon social<span
                     class="text-danger">*</span></label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" formControlName="Nombre" 
+				<input type="text" class="form-control" formControlName="RazonSocial" 
          [ngClass]="{'is-invalid': (FormReg.controls.Nombre.touched || submitted)  
             && FormReg.controls.Nombre.errors}" />
 
