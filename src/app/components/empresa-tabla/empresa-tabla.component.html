@@ -21,7 +21,7 @@
      <td>{{art.IdEmpresa}}</td> 
      <td>{{art.RazonSocial}}</td> 
     	<td>
-        	<button type="button" class="btn btn-sm btn-outline-primary" title="Edit" (click)="Consultar(dto)">
+        	<button type="button" class="btn btn-sm btn-outline-primary" title="Edit" (click)=" mostrarForm()">
                     <span class="fas fa-pencil-alt"></span>       </button>
          <button type="button" class="btn btn-sm btn-outline-success" title="New" (click)=" mostrarForm()"> <span class="fas fa-{{dt? 'times':'check'}}"></span> </button> 
 					<button type="button" class="btn btn-sm btn-danger" title="Delete" (click)="Eliminar(dto)">
