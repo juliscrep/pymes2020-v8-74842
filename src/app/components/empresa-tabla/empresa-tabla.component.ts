@@ -40,7 +40,7 @@ export class EmpresaTablaComponent implements OnInit {
 
   }
   volver(){
-    this.verForm=!this.verForm
+    this.verForm=false;
   }
 
   Eliminar(dto){  
