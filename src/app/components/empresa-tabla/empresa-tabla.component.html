@@ -33,10 +33,7 @@
   </tbody>
 </table>
   </div>
-  <div>
-    <button class="btn btn-primary" type="submit">Editar</button>
-  </div>
-
+  
 <div>
 <!-- Formulario para agregar un nuevo elemento-->
 <div>
@@ -128,3 +125,18 @@
                 
 			</div>
 		</div>
+
+    </fieldset>
+
+    <!-- Botones Grabar, Cancelar/Volver' -->
+	<div class="row justify-content-center">
+		<button type="button" class="btn btn-primary" (click)="Grabar()">
+            <span class="fas fa-check"></span> Grabar
+        </button>
+		
+		<button type="button" class="btn btn-warning" (click)="Volver()">Cancelar
+        </button>
+	</div>
+
+  
+</form>
