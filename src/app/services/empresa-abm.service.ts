@@ -24,9 +24,8 @@ export class EmpresaABMService {
   }
 
   post(obj:EmpresaArticulos) {
-     obj.IdEmpresa = new Date().getTime();
-    EmpresaArticulos.push(obj);
-    return of(obj);
+     
+    return this.httpClient.post(this.resourceUrl,obj);
     
   }
 
