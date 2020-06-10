@@ -15,7 +15,7 @@ export class EmpresaTablaComponent implements OnInit {
   Titulo = "Articulos Empresa";
   Items: EmpresaArticulos[] = [];
     
-  constructor(private empresaArt: ServicioEmpresasService)
+  constructor(private empresaArt: ServicioEmpresasService, private abm:EmpresaABMService)
   { }
 
   ngOnInit():void {
@@ -34,8 +34,7 @@ export class EmpresaTablaComponent implements OnInit {
 
   }
   
-  Eliminar(dto){
-
+  Eliminar(dto){  this.abm.delete(dto)
   }
 
 }
