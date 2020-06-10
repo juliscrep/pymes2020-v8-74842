@@ -20,10 +20,10 @@
      <td>{{art.IdEmpresa}}</td> 
      <td>{{art.RazonSocial}}</td> 
     	<td>
-					<button type="button" class="btn btn-sm btn-outline-primary" title="Edit" (click)="Consultar(dto)">
-                    <span class="fas fa-pencil-alt"></span>
-                </button>
-					<button type="button" class="btn btn-sm btn-outline-primary" title="Eliminar" (click)="Modificar(dto)">
+        	<button type="button" class="btn btn-sm btn-outline-primary" title="Edit" (click)="Consultar(dto)">
+                    <span class="fas fa-pencil-alt"></span>       </button>
+         <button type="button" class="btn btn-sm btn-outline-success" title="New" (click)="Consultar(dto)"> <span class="fas fa-{{dt? 'times':'check'}}"></span> </button> 
+					<button type="button" class="btn btn-sm btn-danger" title="Delete" (click)="Modificar(dto)">
                     <span class="fas fa-{{dt? !'times':'times'}}"></span>
                 </button>
 					
