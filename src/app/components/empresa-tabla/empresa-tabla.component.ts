@@ -16,8 +16,13 @@ export class EmpresaTablaComponent implements OnInit {
   Titulo = "Articulos Empresa";
   Items: EmpresaArticulos[] = [];
   verForm=false ; 
-  constructor(private empresaArt: ServicioEmpresasService, private abm:EmpresaABMService)
-  { }
+  FormFiltro: FormGroup;
+  FormReg: FormGroup;
+  submitted = false;
+
+  constructor( public formBuilder: FormBuilder,
+  private empresaArt: ServicioEmpresasService, 
+  private abm:EmpresaABMService) { }
 
   ngOnInit():void {
     this.GetEmpresaArticulos()
