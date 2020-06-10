@@ -56,4 +56,5 @@ import { EmpresaABMService } from './services/empresa-abm.service';
     {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, providers: [EmpresaABMService]}],
     providers: [ServicioEmpresasService,EmpresaABMService]
  })
+ 
 export class AppModule {}
