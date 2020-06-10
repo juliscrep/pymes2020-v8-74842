@@ -3,6 +3,7 @@
   <h2>{{Titulo}}</h2>
   <br>
 <div>
+
     <table class="table table-bordered table-striped">
   <thead class="table-dark">
   <tr>
@@ -36,4 +37,36 @@
     <button class="btn btn-primary" type="submit">Editar</button>
   </div>
 
+<div>
+<!-- Formulario para agregar un nuevo elemento-->
+<div>
+
+  <br>
+  <br>
+  
+</div>
+
+<form name="FormReg" [formGroup]='FormReg' *ngIf="AccionABMC != 'L'" class="bg-light">
+
+	<fieldset [disabled]="AccionABMC==='C'">
+		<!--campo cant empleados-->
+		<div class="form-group row">
+			<label class="col-form-label col-sm-2 col-sm-offset-2" for="Nombre">Cantidad empleados <span
+                    class="text-danger">*</span></label>
+			<div class="col-sm-6">
+				<input type="text" class="form-control" formControlName="Nombre" 
+         [ngClass]="{'is-invalid': (FormReg.controls.Nombre.touched || submitted)  
+            && FormReg.controls.Nombre.errors}" />
+
+				<span class="text-danger" *ngIf="(FormReg.controls.Nombre.touched || submitted) 
+                        && FormReg.controls.Nombre.errors?.required">
+                    Dato requerido.
+                </span>
+                <span class="text-danger" *ngIf="(FormReg.controls.Nombre.touched || submitted) 
+                       && (FormReg.controls.Nombre.errors?.minlength || FormReg.controls.Nombre.errors?.maxlength) ">
+                    Dato texto, 4 a 55 caracteres.
+                </span>
+                
+			</div>
+		</div>
 
