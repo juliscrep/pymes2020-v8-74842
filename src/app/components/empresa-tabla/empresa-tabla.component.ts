@@ -15,7 +15,7 @@ export class EmpresaTablaComponent implements OnInit {
   Titulo = "Articulos Empresa";
   Items: EmpresaArticulos[] = [];
     verForm
-    =false
+    =tru
   constructor(private empresaArt: ServicioEmpresasService, private abm:EmpresaABMService)
   { }
 
