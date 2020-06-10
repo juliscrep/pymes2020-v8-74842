@@ -47,9 +47,7 @@
 			<label class="col-form-label col-sm-2 col-sm-offset-2" for="CantEmpleados">Cantidad empleados <span
                     class="text-danger">*</span></label>
 			<div class="col-sm-6">
-				<input type="text" class="form-control" formControlName="CantEmpleados" 
-         [ngClass]="{'is-invalid': (FormReg.controls.CantEmpleados.touched || submitted)  
-            && FormReg.controls.CantEmpleados.errors}" />
+				<input type="text" class="form-control" formControlName="CantEmpleados" />
 
 				<span class="text-danger" *ngIf="(FormReg.controls.CantEmpleados.touched || submitted) 
                         && FormReg.controls.CantEmpleados.errors?.required">
