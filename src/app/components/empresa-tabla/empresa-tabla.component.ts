@@ -14,8 +14,7 @@ import {ActivatedRoute} from '@angular/router';
 export class EmpresaTablaComponent implements OnInit {
   Titulo = "Articulos Empresa";
   Items: EmpresaArticulos[] = [];
-    verForm
-    =tru
+  verForm=false 
   constructor(private empresaArt: ServicioEmpresasService, private abm:EmpresaABMService)
   { }
 
