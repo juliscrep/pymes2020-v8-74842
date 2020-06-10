@@ -34,11 +34,11 @@ export class EmpresaTablaComponent implements OnInit {
     this.abm.getById(dto)
   }
 
-  CrearNuevo(dto){ 
-    
+  
+  Grabar(dto){
     this.abm.post(dto)
-
   }
+
   volver(){
     this.verForm=false;
   }
