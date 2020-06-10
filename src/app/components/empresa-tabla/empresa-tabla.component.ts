@@ -27,14 +27,18 @@ export class EmpresaTablaComponent implements OnInit {
   }
 
   Consultar(dto){
-
+    this.abm.getById(dto)
   }
 
   CrearNuevo(dto){ 
+    
+    this.abm.post(dto)
 
   }
   
-  Eliminar(dto){  this.abm.delete(dto)
+  Eliminar(dto){  
+    
+    this.abm.delete(dto)
   }
 
 }
