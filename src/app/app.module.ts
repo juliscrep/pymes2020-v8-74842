@@ -53,6 +53,7 @@ import { EmpresaABMService } from './services/empresa-abm.service';
 
   providers:[
      {provide: APP_BASE_HREF, useValue : '/' },
-    {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, providers: [EmpresaABMService]}],providers: [ServicioEmpresasService]
+    {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true, providers: [EmpresaABMService]}],
+    providers: [ServicioEmpresasService,EmpresaABMService]
  })
 export class AppModule {}
