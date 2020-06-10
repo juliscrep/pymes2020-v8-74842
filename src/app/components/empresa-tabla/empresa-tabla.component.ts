@@ -39,7 +39,10 @@ export class EmpresaTablaComponent implements OnInit {
     this.abm.post(dto)
 
   }
-  
+  volver(){
+    this.verForm=!this.verForm
+  }
+
   Eliminar(dto){  
     
     this.abm.delete(dto)
