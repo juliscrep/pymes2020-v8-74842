@@ -27,7 +27,16 @@ export class EmpresaTablaComponent implements OnInit {
   ngOnInit():void {
     this.GetEmpresaArticulos()
     
-    this.FormReg=this.formBuilder.group(" ");
+    this.FormReg=this.formBuilder.group(
+      {
+        CantEmpleados:[Validators.required],
+        FechaF:[Validators.required, Validators.pattern(
+            "(0[1-9]|[12][0-9]|3[01])[-/](0[1-9]|1[012])[-/](19|20)[0-9]{2}"
+          )],
+        IdEmpresa:[Validators.required],
+        RazonSocial:[Validators.required, Validators.minLength(4), Validators.maxLength(50)]
+      }
+    );
   }
 
   mostrarForm(){
